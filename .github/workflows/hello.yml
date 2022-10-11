@@ -11,5 +11,3 @@ jobs:
         echo "hello $NAME"
       env:
         NAME: GitHub Education
-      run: |
-        echo "hey, there $GITHUB_ACTOR"
