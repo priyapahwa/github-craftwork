@@ -1,0 +1,10 @@
+on: issues
+name: Madlibs in GitHub issues
+jobs:
+  runs-on: ubuntu-latest
+  steps:
+  - uses: actions/checkout@master
+  - uses: bdougie/variables-in-markdown@v.0.1.4
+    env:
+      GITHUB_TOKEN: {{ $secrets.GITHUB_TOKEN }}
+  
