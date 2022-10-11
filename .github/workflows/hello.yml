@@ -1,0 +1,15 @@
+# .github/workflows/hello.yml
+on: push # runs whenever there is a push to any branch of the repo
+name: A workflow for Hello World Action
+jobs:
+  build:
+    name: Hello world action
+    runs-on: ubuntu-latest # useful environment so we can run a simple bash    
+    steps:
+    - name: hello-world
+      run: |
+        echo "hello $NAME"
+      env:
+        NAME: GitHub Education
+      run: |
+        echo "hey, there $GITHUB_ACTOR"
